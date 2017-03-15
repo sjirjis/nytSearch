@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYT Search</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<!--Font Awesome Icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class='container'>
+		<div class='jumbotron'>
+			<h1 class='text-center'>
+				<div class='fa fa-newspaper-o'>
+				</div>
+				New York Times Search
+			</h1>
+		</div>
+		<!-- end jumbotron, start search parameters-->
+		<div class='row'>
+			<div class='col-sm-12'>			
+				<div class='panel panel-info'>
+					<div class='panel-heading'>
+						<h3 class='panel-title'>
+							<div class='fa  fa-list-alt'>
+							</div>
+							Search Parameters
+						</h3>
+					</div>
+				<div class='panel-body'>
+					<form>
+						<div class='form-group'>
+							<label>Search Term:</label>
+							<input class='form-control' type='text' id='searchTerm'>
+						</div>
+						<div class='form-group'>
+							<label>Number of Records to Retrieve:</label>
+							<select class='form-control' id='numRecSelect'>
+								<option value='1'>1</option>
+								<option value='3' selected>3</option>
+								<option value='5'>5</option>
+							</select>
+						</div>						
+						<div class='form-group'>
+							<label>Start Year (Optional):</label>
+							<input class='form-control' type='text' id='sYear'>
+						</div>
+						<div class='form-group'>
+							<label>End Year (Optional):</label>
+							<input class='form-control' type='text' id='eYear'>
+						</div>
+						<button type='submit' class='btn btn-default' id='execSearch'>
+							<div class='fa fa-search'></div>
+							Search
+						</button>
+						<button type='button' class='btn btn-default' id='clearResults'>
+							<div class='fa fa-trash'></div>
+							Clear Results
+						</button>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		<!-- end search parameters, begin artical display-->
+		<div class='row'>
+			<div class='col-sm-12'>
+				<div class='panel panel-info'>
+					<div class='panel-heading'>
+						<h3 class='panel-title'>
+							<div class='fa fa-table'>
+							</div>
+							Top Articles
+						</h3>
+					</div>
+					<div class='panel-body' id='articleResults'>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end artical display, begin footer-->
+		<div class='row'>
+			<div class='col-sm-12'>
+				<h6 class='panel-title text-center'>
+					Inspired by Ahmed, delivered by Steven
+					<div class='fa fa-handshake-o'>
+					</div>
+				</h6>
+		</div>
+	</div>
+	<!-- JQuery API-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!--Link to js file-->
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/moment.js"></script>
+</body>
+</html>
